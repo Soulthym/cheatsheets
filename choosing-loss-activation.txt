@@ -1,0 +1,11 @@
+Which loss to use?
+Problem type                             || Last-layer activation || Loss function              || Example
+============================================================================================================================================================
+Binary classification                    || sigmoid               || binary_crossentropy        || Dog vs cat,Sentiemnt analysis(pos/neg)
+Multi-class, single-label classification || softmax               || categorical_crossentropy   || MNIST has 10 classes single label (one prediction is one digit)
+Multi-class, multi-label classification  || sigmoid               || binary_crossentropy        || News tags classification, one blog can have multiple tags
+Regression to arbitrary values           || None                  || mse                        || Predict house price(an integer/float point)
+Regression to values between 0 and 1     || sigmoid               || mse or binary_crossentropy || Engine health assessment where 0 is broken, 1 is new
+
+source:
+https://www.dlology.com/blog/how-to-choose-last-layer-activation-and-loss-function/
